@@ -1,0 +1,16 @@
+{
+	"Flags": {},
+	"FailedItems": [
+		"specs\\TCS_CustomisedStatement_v1.spec:100",
+		"specs\\TCS_CustomisedStatement_v1.spec:48",
+		"specs\\TCS_CustomisedStatement_v1.spec:55",
+		"specs\\TCS_CustomisedStatement_v1.spec:62",
+		"specs\\TCS_CustomisedStatement_v1.spec:88",
+		"specs\\TCS_CustomisedStatement_v1.spec:94",
+		"specs\\TCS_CustomisedStatement_v1.spec:106",
+		"specs\\TCS_CustomisedStatement_v1.spec:34",
+		"specs\\TCS_CustomisedStatement_v1.spec:69",
+		"specs\\TCS_CustomisedStatement_v1.spec:75",
+		"specs\\TCS_CustomisedStatement_v1.spec:82"
+	]
+}

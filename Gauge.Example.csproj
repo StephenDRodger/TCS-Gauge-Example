@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1232F87A-A36D-42FD-B952-9A2DBA25C992}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gauge.Example</RootNamespace>
+    <AssemblyName>Gauge.Example</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gauge.CSharp.Lib, Version=0.6.1.0, Culture=neutral, PublicKeyToken=3f92af01a0ea350e, processorArchitecture=MSIL">
+      <HintPath>packages\Gauge.CSharp.Lib.0.6.1\lib\net45\Gauge.CSharp.Lib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.4.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>packages\NUnit.3.4.1\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=2.53.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Selenium.WebDriver.2.53.1\lib\net40\WebDriver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=2.53.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Selenium.Support.2.53.1\lib\net40\WebDriver.Support.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Implementation\BankingLogin.cs" />
+    <Compile Include="Implementation\TCSCustomisedStatement.cs" />
+    <Compile Include="Implementation\Pages\BankingCustomisedStatementInput.cs" />
+    <Compile Include="Implementation\sdrBankingCreateCustomerSpec.cs" />
+    <Compile Include="Implementation\createUserSpec.cs" />
+    <Compile Include="Implementation\CustomerSpec.cs" />
+    <Compile Include="Implementation\DriverExtensions.cs" />
+    <Compile Include="Implementation\DriverFactory.cs" />
+    <Compile Include="Implementation\Pages\BankingLoginPage.cs" />
+    <Compile Include="Implementation\Pages\BankingManagerHomePage.cs" />
+    <Compile Include="Implementation\Pages\BankingNewCustomerPage.cs" />
+    <Compile Include="Implementation\Pages\BasePage.cs" />
+    <Compile Include="Implementation\Pages\CreateProductPage.cs" />
+    <Compile Include="Implementation\Pages\createUserPage.cs" />
+    <Compile Include="Implementation\Pages\CustomerPage.cs" />
+    <Compile Include="Implementation\Pages\EditProjectPage.cs" />
+    <Compile Include="Implementation\Pages\ProductListPage.cs" />
+    <Compile Include="Implementation\Pages\ProductPage.cs" />
+    <Compile Include="Implementation\Pages\SignupPage.cs" />
+    <Compile Include="Implementation\ScreenGrabber.cs" />
+    <Compile Include="Implementation\UserSpec.cs" />
+    <Compile Include="Implementation\ProductSpec.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="appveyor.yml" />
+    <None Include="env\default\default.properties" />
+    <None Include="env\failure\default.properties" />
+    <None Include="manifest.json" />
+    <None Include="packages.config" />
+    <None Include="README.md" />
+    <None Include="resources\login_details.csv" />
+    <None Include="resources\ManagerLogin.csv" />
+    <None Include="resources\my_login_users.csv" />
+    <None Include="resources\product_data.csv" />
+    <None Include="resources\sdr_users1.csv" />
+    <None Include="resources\user.csv" />
+    <None Include="specs\sdrBankingCreateCustomer.spec" />
+    <None Include="specs\banking.spec" />
+    <None Include="specs\concepts\delete_product.cpt" />
+    <None Include="specs\concepts\find_and_open_product.cpt" />
+    <None Include="specs\concepts\signup.cpt" />
+    <None Include="specs\createUser.spec" />
+    <None Include="specs\customer.spec" />
+    <None Include="specs\products.spec" />
+    <None Include="specs\TCS_CustomisedStatement_v1.spec" />
+    <None Include="specs\user.spec" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\Selenium.WebDriver.IEDriver.2.53.1.1\build\Selenium.WebDriver.IEDriver.targets" Condition="Exists('packages\Selenium.WebDriver.IEDriver.2.53.1.1\build\Selenium.WebDriver.IEDriver.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Selenium.WebDriver.IEDriver.2.53.1.1\build\Selenium.WebDriver.IEDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Selenium.WebDriver.IEDriver.2.53.1.1\build\Selenium.WebDriver.IEDriver.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

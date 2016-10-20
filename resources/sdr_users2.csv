@@ -1,0 +1,3 @@
+CustomerName, Gender, DateofBirth, Address, City, State, PIN, MobileNumber, E-mail, Password
+SDR, male, 2016/10/08, My House, My City, My State, 123456, 0987654321, SD@R.co.za, MyPassword
+Amy Lynne, Female, 2016/01/30, Her House, Her City, Her State, 654321, 01324567895, ALR@Bfell.co.za, PinkSnow
